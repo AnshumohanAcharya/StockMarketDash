@@ -3,10 +3,9 @@ import "./login.css";
 
 const Login = () => {
   const loginwithgoogle = () => {
-    window.open(`http://${process.env.SERVER_URL}/auth/google/callback`, "_self");
+    window.open(`http://localhost:8000/auth/google/callback`, "_self");
   };
   return (
-    <>
       <div className="login-page">
         <h1 style={{ textAlign: "center" }}>Login</h1>
         <div className="form">
@@ -23,7 +22,6 @@ const Login = () => {
           </button>
         </div>
       </div>
-    </>
   );
 };
 
