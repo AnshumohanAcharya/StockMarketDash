@@ -23,36 +23,28 @@ The Stock Market Dashboard is a React-based application that provides real-time 
 1. Clone the repository:
    ```sh
    git clone https://github.com/AnshumohanAcharya/StockMarketDash
-```sh
+
 Navigate to the project directory:
 ```sh
 cd stock-market-dashboard
-```sh
+```
 Install dependencies:
 ```sh
 npm install
-```sh
+```
 Create a .env file in the root directory and add your server URL:
 env
 ```sh
 REACT_APP_SERVER_URL=your_server_url
-```sh
+```
 Start the development server:
-sh
 ```sh
 npm start
-```sh
+```
 API Integration
-The application uses the Yahoo Finance API to fetch real-time market data. You need to specify the server URL in the .env file.
+The application uses the Yahoo Finance API to fetch real-time market data. (You need to set your headers in stockApi file.)
 
-API Endpoints Used:
 
-Market Summary
-Sector Performance
-Market Indices
-Chart Data
-Stock Search Data
-Components Overview
 Header:
 
 Displays a personalized greeting with the current date.
@@ -76,7 +68,7 @@ State Management
 The application uses React hooks (useState, useEffect) for state management. Custom hooks are utilized for fetching data from the API. The state is managed in a way that ensures the UI is responsive and up-to-date with real-time data.
 
 Styling and Responsive Design
-The application uses a combination of CSS and a UI library like Material-UI or Tailwind CSS to ensure a clean and responsive design. The layout is designed to be accessible and performant across different devices and screen sizes.
+The application uses a combination of CSS and a UI library like Material-UI to ensure a clean and responsive design. The layout is designed to be accessible and performant across different devices and screen sizes.
 
 Bonus Feature: Stock Search Functionality
 The dashboard includes a search functionality that allows users to enter the stock code and retrieve historical data. This feature enhances the user experience by providing detailed insights into specific stocks.
@@ -85,12 +77,11 @@ Deployment
 To deploy the application, follow these steps:
 
 Build the application:
-sh
 ```sh
 npm run build
-```sh
+```
 
-Deploy the build directory to your preferred hosting service (e.g., Vercel, Netlify, GitHub Pages).
+Deploy the build directory to your preferred hosting service.
 Conclusion
 The Stock Market Dashboard is a robust and user-friendly application that provides real-time market insights. By integrating with the Yahoo Finance API and utilizing modern web development practices, the dashboard ensures an engaging and informative user experience.
 
