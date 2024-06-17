@@ -1,16 +1,5 @@
 # Stock Market Dashboard
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Project Setup](#project-setup)
-3. [API Integration](#api-integration)
-4. [Components Overview](#components-overview)
-5. [State Management](#state-management)
-6. [Styling and Responsive Design](#styling-and-responsive-design)
-7. [Bonus Feature: Stock Search Functionality](#bonus-feature-stock-search-functionality)
-8. [Deployment](#deployment)
-9. [Conclusion](#conclusion)
-
 ## Introduction
 The Stock Market Dashboard is a React-based application that provides real-time market data in an intuitive and user-friendly manner. The dashboard includes market summaries, sector performance, market indices, and charts for selected market indices or ETFs. Additionally, it features a search functionality for retrieving historical data for specific stocks.
 
