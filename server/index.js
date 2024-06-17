@@ -31,7 +31,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, '/client/dist')));
 
 app.use(cors({
-  origin: process.env.REACT_APP_BASE_URL,
+  origin: "http://localhost:3000",
   methods:"GET,POST,PUT,DELETE",
   credentials:true
 }));
@@ -86,12 +86,16 @@ passport.deserializeUser((user,done)=>{
   done(null,user);
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "Server is running" });
+})
+
 // initial google ouath login
 app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]}));
 
 app.get("/auth/google/callback",passport.authenticate("google",{
-  successRedirect:`${process.env.REACT_APP_BASE_URL}/dashboard`,
-  failureRedirect:`${process.env.REACT_APP_BASE_URL}/login`
+  successRedirect:`http://localhost:3000/dashboard`,
+  failureRedirect:`http://localhost:3000/`
 }))
 
 app.get("/login/sucess",async(req,res)=>{
@@ -106,7 +110,7 @@ app.get("/login/sucess",async(req,res)=>{
 app.get("/logout",(req,res,next)=>{
   req.logout(function(err){
       if(err){return next(err)}
-      res.redirect(`${process.env.REACT_APP_BASE_URL}/login`);
+      res.redirect(`https://stockmarketdash-frontend.onrender.com`);
   })
 })
 
